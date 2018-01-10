@@ -22,6 +22,9 @@ public class BuscaEmpresa implements Tarefa {
         String filtro = request.getParameter("filtro");
         Collection<Empresa> empresas = new EmpresaDAO()
                 .buscaPorSimilaridade(filtro);
+        
+        
+        
 
         request.setAttribute("empresas", empresas);
 
